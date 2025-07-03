@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,WONK@9..144,1&family=Montserrat&display=swap');
+@media only screen and (min-width: 481x) {
+    .mobile-only {
+        display:none !important;
+    }
+} 
+
+@media only screen and (max-width: 480px) {
+    .desktop-only {
+        display:none !important;
+    }
+} 
+
+:root{
+    --color-Green500: hsl(158, 36%, 37%);
+    --color-Green700: hsl(158, 42%, 18%);
+    --color-Black: hsl(212, 21%, 14%);
+    --color-Grey: hsl(228, 12%, 48%);
+    --color-Cream: hsl(30, 38%, 92%);
+    --color-White: hsl(0, 0%, 100%);
+
+    --space-500: 2.86em;
+    --space-400: 2.29em;
+    --space-300: 1.71em;
+    --space-200: 1.14em;
+    --space-100: 0.571em;
+    --space-50: 0.286em;
+}
+
+.text_presset1{
+    font-family: "Fraunces", sans-serif;
+    font-size: 2.29em;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-weight: bold;
+    color: var(--color-Black);
+    text-decoration: none;
+}
+
+.text_presset2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    line-height: 110%;
+    letter-spacing: 0;
+    font-weight: bold;
+    color: var(--color-Black);
+    text-decoration: none;
+}
+
+.text_presset3{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    line-height: 160%;
+    letter-spacing: 0;
+    font-weight: 400;
+    color: var(--color-Black);
+    text-decoration: none;
+}
+
+.text_presset4{
+    font-family: "Montserrat", sans-serif;
+    font-size: .857em;
+    line-height: 120%;
+    letter-spacing: .357em;
+    font-weight: 400;
+    color: var(--color-Black);
+    text-decoration: none;
+}
+
+.text_presset5{
+    font-family: "Montserrat", sans-serif;
+    font-size: .929em;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+    color: var(--color-Black);
+    text-decoration:line-through;
+}
+
+body{
+    background-color: var(--color-Cream);
+    margin: 0;
+    *{margin: 0;}
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card{
+    background-color: var(--color-White);
+    border-radius: 0.571em;
+    width:  fit-content;
+    height: fit-content;
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        padding: 1vh .5vw;
+    }
+    .card {
+        width: 25em;
+        height: fit-content;
+        margin: 0;
+    }
+}
+
+
+.product-image{
+    img.mobile-only{
+        width: 25em;
+        height: 24.4em;
+        border-radius: 0.571em 0.571em 0 0;
+    }
+    img.desktop-only{
+        width: 21.4em;
+        height: auto;
+        border-radius: 0.571em 0 0 0.571em;
+    }
+}
+
+.product {
+    padding: var(--space-400);
+    section + section{
+        margin-top: var(--space-300);
+    }
+}
