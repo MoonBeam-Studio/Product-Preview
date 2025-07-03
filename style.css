@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,WONK@9..144,1&family=Montserrat&display=swap');
-@media only screen and (min-width: 480x) {
+@media only screen and (min-width: 480px) {
     .mobile-only {
         display:none !important;
     }
@@ -44,7 +44,7 @@
     line-height: 110%;
     letter-spacing: 0;
     font-weight: bold;
-    color: var(--color-Black);
+    color: var(--color-White);
     text-decoration: none;
 }
 
@@ -54,7 +54,7 @@
     line-height: 160%;
     letter-spacing: 0;
     font-weight: 400;
-    color: var(--color-Black);
+    color: var(--color-Grey);
     text-decoration: none;
 }
 
@@ -64,8 +64,9 @@
     line-height: 120%;
     letter-spacing: .357rem;
     font-weight: 400;
-    color: var(--color-Black);
+    color: var(--color-Grey);
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .text_presset5{
@@ -74,7 +75,7 @@
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 400;
-    color: var(--color-Black);
+    color: var(--color-Grey);
     text-decoration:line-through;
 }
 
@@ -115,22 +116,29 @@ main{
     }
     .card {
         width: 25rem;
-        height: fit-content;
+        height: 53.57rem;
         margin: 0;
     }
     .product {
-    padding: var(--space-400);
-    section + section{
-        margin-top: var(--space-300);
+        padding: var(--space-400);
+        section + section{
+            margin-top: var(--space-300);
+        }
     }
 }
-}
 
+@media screen and (min-width: 480px) {
+    .card{
+        display: flex;
+        max-width: 42.8575rem;
+        max-height: 32.5715rem;
+    }
+}
 
 .product-image{
     img.mobile-only{
-        width: 25rem;
-        height: 24.4rem;
+        width: 100%;
+        height: 24.428571428571427rem;
         border-radius: 0.571rem 0.571rem 0 0;
     }
     img.desktop-only{
@@ -141,10 +149,7 @@ main{
 }
 
 .product-info{
-    h1{
-        margin-top: var(--space-300);
-    }
-    p{
+    *{
         margin-top: var(--space-300);
     }
     *:first-child{
@@ -152,3 +157,35 @@ main{
     }
 }
 
+.product-price{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    .text_presset1{
+        color: var(--color-Green500);
+        margin-right: 1.142rem;
+    }
+    .text_presset5{
+        padding-top: .5rem;
+    }
+}
+
+.cart{
+    border-radius: 0.571rem;
+    transition-duration: .4s;
+    background-color: var(--color-Green500);
+    display: flex;
+    width: auto;
+    height: fit-content;
+    padding: 1.142rem 2.285rem;
+    justify-content: center;
+    img{
+        width: 1.285rem;
+        height: 1.285rem;
+        margin-right: 0.571rem;
+    }
+}
+.cart:hover{
+    transition-duration: .2s;
+    background-color: var(--color-Green700);
+}
